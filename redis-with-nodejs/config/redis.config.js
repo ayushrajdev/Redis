@@ -18,8 +18,8 @@ redisClient.getJson = async function (params) {
     return JSON.parse(data);
 };
 
-async function disconnectRedisDb(params) {
-    return redisClient.quit();
+export async function disconnectRedisDb(params) {
+    return await redisClient.quit();
 }
 
 export default redisClient;
